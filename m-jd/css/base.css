@@ -1,0 +1,91 @@
+/*样式重置 cssreset */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /*去除移动端点击高亮显示*/
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-size: 14px;
+  font-family: "MicroSoft YaHei", sans-serif;
+  background-color: #eee;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+input {
+  border: none;
+  outline: none;
+  /*清楚移动端默认的表单样式*/
+  -webkit-appearance: none;
+}
+/*公共部分 commentcss */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+[class^="icon-"] {
+  background: url("../images/sprites.png") no-repeat;
+  -webkit-background-size: 200px 200px;
+  background-size: 200px 200px;
+}
+.toolBar {
+  height: 44px;
+  width: 100%;
+  background: url("../images/header-bg.png") repeat-x center;
+  background-size: 1px 44px;
+  -webkit-background-size: 1px 44px;
+  padding: 0 40px;
+}
+.toolBar .icon-back,
+.toolBar .icon-category {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 12px 10px;
+  width: 40px;
+  height: 44px;
+  background-position: -21px 0;
+  -webkit-background-position: -21px 0;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+.toolBar .icon-category {
+  left: auto;
+  right: 0;
+  background-position: -60px 0;
+  -webkit-background-position: -60px 0;
+}

@@ -1,0 +1,236 @@
+.jd-layout {
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+/*header部分*/
+.jd-header {
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+.jd-header .header-in {
+  max-width: 640px;
+  min-width: 320px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 5px 50px 0 70px ;
+  position: relative;
+}
+.jd-header .header-in .icon-logo {
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 60px;
+  height: 40px;
+  background-position: 0 -103px;
+}
+.jd-header .header-in form {
+  position: relative;
+  width: 100%;
+}
+.jd-header .header-in form .icon-search {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background-position: -60px -109px;
+}
+.jd-header .header-in form input {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 30px;
+}
+.jd-header .header-in .login {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 20px;
+  color: #fff;
+}
+/*banner部分*/
+.jd-banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.jd-banner ul {
+  width: 1000%;
+  -webkit-transform: translateX(-10%);
+  transform: translateX(-10%);
+}
+.jd-banner ul li {
+  width: 10%;
+  float: left;
+}
+.jd-banner ul li a {
+  display: block;
+}
+.jd-banner ul li a img {
+  width: 100%;
+  float: left;
+}
+.jd-banner ol {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+.jd-banner ol li {
+  float: left;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.jd-banner ol .active {
+  background-color: #fff;
+}
+/*nav部分*/
+.jd-nav {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.jd-nav ul li {
+  float: left;
+  width: 25%;
+}
+.jd-nav ul li a {
+  display: block;
+}
+.jd-nav ul li a img {
+  width: 40px;
+}
+.jd-nav ul li p {
+  margin: 12px 0;
+  font-size: 12px;
+}
+/*products部分*/
+.products {
+  padding: 10px;
+  background-color: #eee;
+}
+.products .items {
+  background-color: #fff;
+  width: 100%;
+  margin: 20px 0;
+}
+.products .items .items-header {
+  border-bottom: 1px solid #ccc;
+  height: 32px;
+}
+.products .items .items-header h3 {
+  line-height: 32px;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+}
+.products .items .items-header h3::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  background-color: red;
+  left: -10px;
+  top: 10px;
+}
+.products .items .items-body a {
+  display: block;
+  width: 50%;
+}
+.products .items .items-body a img {
+  display: block;
+  width: 100%;
+}
+.products .seckill .items-header {
+  line-height: 32px;
+  border-bottom: none;
+}
+.products .seckill .items-header .icon-seckill {
+  float: left;
+  width: 16px;
+  height: 20px;
+  background: url("../images/seckill-icon.png") no-repeat;
+  background-size: 16px 20px;
+  margin: 4px 5px 0;
+}
+.products .seckill .items-header .seckill-title {
+  margin: 0 5px;
+}
+.products .seckill .items-header .time {
+  margin: 8px 5px 0;
+}
+.products .seckill .items-header .time span {
+  float: left;
+  text-align: center;
+  line-height: 15px;
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  color: #fff;
+  margin-right: 4px;
+}
+.products .seckill .items-header .time span:nth-child(3n) {
+  background-color: #fff;
+  color: #000;
+  margin-right: 0px;
+}
+.products .seckill .items-header .more {
+  margin-right: 10px;
+}
+.products .seckill .items-body ul li {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}
+.products .seckill .items-body ul li a {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+.products .seckill .items-body ul li a img {
+  display: inline-block;
+  width: 64%;
+}
+.products .seckill .items-body ul li p:nth-child(2) {
+  color: red;
+  font-size: 12px;
+}
+.products .seckill .items-body ul li p:nth-child(3) {
+  color: #000;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+/*footer部分*/
+.jd-footer {
+  width: 100%;
+  height: 44px;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+.jd-footer ul {
+  width: 100%;
+}
+.jd-footer ul li {
+  float: left;
+  width: 25%;
+}
+.jd-footer ul li a {
+  display: block;
+}
+.jd-footer ul li a img {
+  height: 44px;
+}

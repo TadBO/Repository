@@ -1,0 +1,87 @@
+body,
+html {
+  height: 100%;
+}
+body {
+  background-color: #ccc;
+}
+.category-layout {
+  max-width: 640px;
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+/*header部分*/
+.category-header {
+  position: absolute;
+  z-index: 999;
+}
+.category-header form {
+  width: 100%;
+  height: 30px;
+  padding: 7px 0;
+}
+.category-header form input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding-left: 20px;
+}
+/*body部分*/
+.categroy-body {
+  width: 100%;
+  height: 100%;
+  padding-top: 44px;
+  overflow: hidden;
+}
+.categroy-body .body-left {
+  width: 90px;
+  height: 100%;
+  float: left;
+}
+.categroy-body .body-left ul li a {
+  display: block;
+  width: 90px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.categroy-body .body-left ul .current a {
+  color: red;
+  border-right: none;
+}
+.categroy-body .body-right {
+  height: 100%;
+  overflow: hidden;
+  padding: 10px;
+}
+.categroy-body .body-right .banner a {
+  display: block;
+}
+.categroy-body .body-right .banner a img {
+  width: 100%;
+}
+.categroy-body .body-right h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.categroy-body .body-right ul {
+  padding-top: 10px;
+}
+.categroy-body .body-right ul li {
+  float: left;
+  width: 33.33%;
+  margin-bottom: 10px;
+}
+.categroy-body .body-right ul li a {
+  display: block;
+  text-align: center;
+}
+.categroy-body .body-right ul li a img {
+  width: 60%;
+}
