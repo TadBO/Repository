@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //定义地图类
+    function  Map(){
+        this.width = 800;     //地图宽度
+        this.height = 400;    //地图高度
+        this.color = "#ddd";  //地图背景颜色
+        this.position = "absolute";
+        this.name = 'map';
+        //定义方法显示地图
+        this.show = function () {
+            var div = document.createElement('div');
+            div.style.width = this.width + 'px';
+            div.style.height = this.height + 'px';
+            div.style.backgroundColor = this.color;
+            div.style.position = this.position;
+            div.className = this.name;
+            document.querySelector('body').appendChild(div);
+        }
+    }
+    //定义食物类
+    function  Food(){
+        this.width = 20;     //食物大小
+        this.height = 20;
+        this.color = 'green';  //食物颜色
+        this.position = 'absolute';
+        this.x = 0;       //食物位置
+        this.y = 0;
+        var div = document.createElement('div');
+        document.querySelector('.map').appendChild(div);
+        //定义方法显示食物
+        this.show = function () {
+
+            div.style.width = this.width + "px";
+            div.style.height = this.height + 'px';
+            div.style.backgroundColor = this.color;
+            div.style.position = this.position;
+            /**
+             * todo 蛇身的位置出现食物未判断
+             * @type {number}
+             */
+            this.x = Math.floor(Math.random() * 40);
+            this.y = Math.floor(Math.random() * 20);
+            div.style.left = this.x * 20 + "px";       //食物随机位置
+            div.style.top = this.y * 20 + "px";
+        }
+    }
+    //定义蛇类
+    function  Snake(){
+        this.width = 20;  //蛇的大小
+        this.height = 20;
+        this.direct = 'right';    //蛇初始移动方向
+        this.position = 'absolute';
+        this.body = [[3,2,'red',null],[2,2,'blue',null],[1,2,'blue',null]];     //初始蛇身
+        //判断蛇的方向
+        this.setDirect = function (code) {
+            switch (code) {
+                case 39:
+                    this.direct = 'right';
+                    break;
+                case 37:
+                    this.direct = 'left';
+                    break;
+                case 38:
+                    this.direct = 'up';
+                    break;
+                case 40:
+                    this.direct = 'down';
+                    break;
+            }
+        }
+        //定义方法显示蛇
+        this.show = function () {
+            var length = this.body.length;
+            for(var i = 0; i < length; i++) {
+                if (this.body[i][3] == null){
+                    this.body[i][3] = document.createElement('div');
+                    this.body[i][3].style.width = this.width + 'px';
+                    this.body[i][3].style.height = this.height + 'px';
+                    this.body[i][3].style.position = this.position;
+                    this.body[i][3].style.backgroundColor = this.body[i][2];
+                    document.querySelector('.map').appendChild(this.body[i][3]);
+                }
+                //设置蛇的横纵坐标
+                this.body[i][3].style.left = this.body[i][0] * this.width + 'px';    //蛇移动源头，改变left，top值
+                this.body[i][3].style.top = this.body[i][1] * this.height + 'px';
+            }
+        }
+        //定义方法移动蛇
+        this.move = function (food) {
+            console.log(food);
+            var length = this.body.length-1;
+            console.log(length);
+            for(var i = length; i > 0; i--) {   //让蛇身后面的跟随蛇头移动
+                this.body[i][0] = this.body[i-1][0];
+                this.body[i][1] = this.body[i-1][1];
+            }
+            switch (this.direct) {    //判断蛇移动方向后，移动蛇头
+                case 'up' :
+                    this.body[0][1] -= 1;
+                    break;
+                case 'right':
+                    this.body[0][0] += 1;
+                    break;
+                case 'down':
+                    this.body[0][1] += 1;
+                    break;
+                case 'left':
+                    this.body[0][0] -= 1;
+                    break;
+                default :
+                    return;
+            }
+            //判断吃到食物
+            if(this.body[0][0] ==food.x && this.body[0][1] == food.y) {   //当蛇头的left值与top值与食物相同时判定为吃掉
+                var x = this.body[length][0];
+                var y = this.body[length][1];
+                this.body.push([x,y,'blue',null]);   //把当前位置追加给蛇身
+                food.show();  //重新显示食物位置
+            }
+            //判断撞墙死
+            if(this.body[0][0] < 0 || this.body[0][0] > 39 || this.body[0][1] < 0 || this.body[0][1] > 19 ) { //当蛇头超出地图时判定为撞墙
+                alert('game over');
+                clearInterval(timeId);
+                return;
+            }
+            //判断是否吃到自己
+            for(var i = 1; i < this.body.length; i++) {
+                 if(this.body[0][0] == this.body[i][0] && this.body[0][1] == this.body[i][1]) {  //当蛇头与蛇身其他位置相同时，判定吃到自己，游戏结束
+                     alert('game over');
+                     clearInterval(timeId);
+                     return;
+                 }
+            }
+            this.show();   //实时跟新蛇的位置
+        }
+    }
+    window.onload = function () {
+        var map = new Map();
+        map.show();
+        console.log(map);
+        var food = new Food();
+        console.log(food.x);
+        food.show();
+        var snake = new Snake();
+        snake.show();
+        timeId = setInterval(function () {
+            snake.move(food);
+        }, 200);
+        document.onkeydown = function (e) {
+            e = e || window.event;
+            snake.setDirect(e.keyCode);
+        }
+    }
+</script>
