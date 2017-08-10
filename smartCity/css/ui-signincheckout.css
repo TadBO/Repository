@@ -1,0 +1,50 @@
+﻿/*!
+ * author:zhouyu,telephone:15157151057
+ * Copyright 2017 chengyun, Inc.
+ * Licensed under the MIT license
+ */
+   
+ 
+/*signincheckout*/
+
+#wrap{height:100%;}
+.header2{background-color: #9853F5;color: #fff;}
+.header2 .zimu {color:#fff;}
+.signincheckout{height:100%;background-color:#f9f9f9;}
+.signincheckout .top{height:6.73rem;background-color:#9853F5;text-align:center;}
+.signincheckout .top .touxiang{width:3rem;height:3rem;display:inline-block;
+   margin-top:1.5rem;}
+.signincheckout .top .nick{margin-top:1.53rem;font-size:1rem;color:#fff; }
+.signincheckout .con{margin-top:3rem;}
+.signincheckout .con .nli{background-color:#ffffff;margin-bottom:4px;font-size:1rem;
+    padding:20px 0px 20px 18px;color:#666666;}
+
+	
+/*签出历史*/
+.page__bd.page__bd_spacing {padding: 0 3rem;}
+.weui-btn.weui-btn_primary{border-radius:5px;}
+.weui-btn.weui-btn_primary.sign{background-color: #9853F5;}
+.weui-btn.weui-btn_primary.checkout{background-color: #FFFFFF;color:#AEAEAE;}
+.weui-btn:after {border: 1px solid rgba(0, 0, 0, 0.5);}
+
+
+.lists{padding:10px;}
+	.lists .list{margin-bottom: 0.5rem;border-radius:2px;background-color:#fff;box-shadow: 0px 1px 1px #dbe1ec;-webkit-box-shadow: 0px 2px 6px #c7c7c7}
+	.lists .list .date{padding: 8px 0 8px 0.85rem; border-bottom: 1px dashed #E7E7E7;font-size:0.9rem;color:#222222;}
+	.lists .list .datalis{display: -webkit-box !important;display: box !important;}
+	.lists .list .datalis .signtime,.lists .list .datalis .checkout{-webkit-box-flex: 1;box-flex: 1;padding: 10px 0;
+         text-align: center;color:#8C8C8C;}
+	.lists .list .datalis .signtime:after{  
+				content: " ";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				top: 4px;
+				height: 54px;
+				border-right: 1px dashed #e5e5e5;
+				color: #e5e5e5;
+				z-index: 2;
+			}
+			
+	.lists .list .datalis .signtime p,.lists .list .datalis .checkout p{font-size:0.9rem;}
+	.lists .list .datalis .signtime span,.lists .list .datalis .checkout span{font-size:0.75rem;}

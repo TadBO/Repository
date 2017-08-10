@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-签入签出</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-signincheckout.css" />
+	<link rel="stylesheet" href="css/ui-sign.css">
+</head> 
+<body ontouchstart>
+<div id="wrap">
+	<div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header header2"> 
+	     <div class="back" onclick="openWindow('./index.html');">返回</div>
+         <div class="h1">考勤</div>
+		 <div class="zimu" onclick="openWindow('./checkouthistory.html');">历史</div>
+	  </div>
+    </div>
+	
+    <div id="content" class="signincheckout">
+        <div class="top">
+		   <div class="touxiang">
+		      <img src="images/personinfo-1-46-46.png"/>
+		   </div>
+		 
+		</div>
+		<div class="con">
+			 <div class="page__bd page__bd_spacing">
+				<a href="javascript:;" class="weui-btn weui-btn_primary" id="sign">签到</a>
+				
+				<a href="javascript:;" class="weui-btn weui-btn_primary" id="checkout">签退</a>
+			</div>
+		</div>
+    </div>
+    <div id="footer">
+    </div>
+ </div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/android.js"></script>
+<script src="js/sign.js"></script>
+</body>
+</html> 

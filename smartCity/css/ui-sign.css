@@ -1,0 +1,27 @@
+.header .back {
+    width: 4rem;
+    height: 2.5rem;
+    font-size: 0.83rem;
+    text-align: center;
+    color: #9853F5;
+    background-image: url(../images/12-21.png);
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    background-size: auto 1.4rem;
+}
+.header:after {
+    display: none;
+}
+#content {
+    overflow: inherit;
+}
+.signincheckout .top {
+    border: 1px solid #9853F5;
+}
+.weui-btn_primary {
+    background-color: #fff;
+}
+.touxiang img {
+    width: 100%;
+    border-radius: 50%;
+}

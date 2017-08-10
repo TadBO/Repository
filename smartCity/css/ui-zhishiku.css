@@ -1,0 +1,10 @@
+﻿/*!
+ * author:zhouyu,telephone:15157151057
+ * Copyright 2017 chengyun, Inc.
+ * Licensed under the MIT license
+ */
+ 
+ 
+ .weui-cells{margin-top:0;}
+ .weui-cells:before{border-top: none;}
+ .weui-search-bar:after{border-bottom: none;}

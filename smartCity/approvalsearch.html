@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-审批查询</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-shengpichaxun.css" />   
+</head> 
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header"> 
+	     <div class="back" onclick="openWindow('./index.html');">返回</div>
+         <div class="h1">审批查询</div>
+		 <div class="zimu"></div>
+	  </div>
+    </div>
+    <div id="content">
+		<div class="content">
+			 <div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<p>审批事项编号</p>
+					</div>
+					<div class="weui-cell__ft" contenteditable="true">请输入审批事项编号</div>
+				</div> 
+			</div>
+		 
+			<div class="page__bd page__bd_spacing">
+			   <a href="./approvalsearchlist.html" class="weui-btn weui-btn_primary gaidong-bg">查询</a>
+			</div>
+     </div>
+   </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+	var myScroll; 
+    function loaded() { 
+    myScroll = new iScroll('content');
+	 
+    }  
+    window.addEventListener('load', loaded, false); 	
+	$('body').click(function(e){
+		if(e.target.nodeName != "INPUT"){
+			$('input').blur();
+		};
+	})
+</script>
+</body>
+</html> 

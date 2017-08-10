@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-消息对话框</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-news.css" />   
+</head> 
+<body ontouchstart>
+<div id="wrap">
+	<div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header"> 
+	     <div class="back" onclick="openWindow('./news.html')">返回</div>
+         <div class="h1">协同处置</div>
+		 <div class="zimu"></div>
+	  </div>
+    </div>
+	  
+	 
+    <div id="content">
+        <div class="content">
+		    <ul class="lists">
+			  <li class="list">
+			     <div class="time">2017-07-02 09:28</div>
+				 <div class="details">
+				     <div class="nick">
+					     <img src="images/nick.png"/>
+					 </div>
+					 <div class="detailsCon">
+					 张三于02-23 13：21对您发起协同请求 【萧绍路34号出现出店经营，老板拒不 整改，请速过来支持。】
+					 </div>
+				 </div>
+			  </li>
+			  
+			  <li class="list">
+			     <div class="time">2017-07-02 09:28</div>
+				 <div class="details">
+				     <div class="nick">
+					     <img src="images/nick.png"/>
+					 </div>
+					 <div class="detailsCon">
+					 张三于02-23 13：21对您发起协同请求 【萧绍路34号出现出店经营，老板拒不 整改，请速过来支持。】
+					 </div>
+				 </div>
+			  </li>
+			  
+			  <li class="list">
+			     <div class="time">2017-07-02 09:28</div>
+				 <div class="details">
+				     <div class="nick">
+					     <img src="images/nick.png"/>
+					 </div>
+					 <div class="detailsCon">
+					 张三于 同请求  
+					 </div>
+				 </div>
+			  </li>
+			 
+			 
+			  <li class="list">
+			     <div class="time">2017-07-02 09:28</div>
+				 <div class="details">
+				     <div class="nick">
+					     <img src="images/nick.png"/>
+					 </div>
+					 <div class="detailsCon">
+					 张三于02-23 13：21对您发起协同请求 【萧绍路34号出现出店经营，老板拒不 整改，请速过来支持。】
+					 </div>
+				 </div>
+			  </li>
+			  
+			    <li class="list">
+			     <div class="time">2017-07-02 09:28</div>
+				 <div class="details">
+				     <div class="nick">
+					     <img src="images/nick.png"/>
+					 </div>
+					 <div class="detailsCon">
+					 张三于同请求张三于同请求   
+					 </div>
+				 </div>
+			  </li>
+			  
+			    <li class="list">
+			     <div class="time">2017-07-02 09:28</div>
+				 <div class="details">
+				     <div class="nick">
+					     <img src="images/nick.png"/>
+					 </div>
+					 <div class="detailsCon">
+					  张三于同请求张三于同请求   
+					 </div>
+				 </div>
+			  </li>
+			</ul>
+		</div>
+    </div>
+    <div id="footer">
+    </div>
+ </div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+	var myScroll; 
+    function loaded() { 
+    myScroll = new iScroll('content');
+	 
+    }  
+    window.addEventListener('load', loaded, false); 	
+	$('body').click(function(e){
+		if(e.target.nodeName != "INPUT"){
+			$('input').blur();
+		};
+	})
+</script>
+</body>
+</html> 

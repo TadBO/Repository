@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>城管-超时提醒</title>
+    <link rel="stylesheet" href="css/ui-media.css"/>
+    <link rel="stylesheet" href="css/ui-component.css"/>
+    <link rel="stylesheet" href="css/ui-common.css"/>
+    <link rel="stylesheet" href="css/ui-xianchanggaidong.css"/>
+</head>
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+        <div class="header">
+            <div class="back" onclick="openWindow('./OAassign.html');">返回</div>
+            <div class="h1">超时提醒事件</div>
+            <div class="zimu" onclick="openWindow('./solve.html')">处理</div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="content">
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>来源渠道</p>
+                    </div>
+                    <div class="weui-cell__ft" contenteditable="true">OA网络问政</div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>交办说明</p>
+                    </div>
+                    <div class="weui-cell__ft" contenteditable="true">xxx路有市民举报出现出店经营</div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>交办时间</p>
+                    </div>
+                    <div class="weui-cell__ft" contenteditable="true">2017-02-23 13：21</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+    var myScroll;
+    function loaded() {
+        myScroll = new iScroll('content');
+
+    }
+    window.addEventListener('load', loaded, false);
+    $('body').click(function(e){
+        if(e.target.nodeName != "INPUT"){
+            $('input').blur();
+        };
+    })
+
+</script>
+
+
+</body>
+</html>

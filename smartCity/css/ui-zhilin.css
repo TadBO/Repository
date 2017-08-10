@@ -1,0 +1,17 @@
+﻿/*!
+ * author:zhouyu,telephone:15157151057
+ * Copyright 2017 chengyun, Inc.
+ * Licensed under the MIT license
+ */
+ 
+ /*zhilin*/
+.weui-cell_access .weui-cell__ft {
+    padding-right: 1rem;
+    position: relative;
+}
+ 
+.weui-cell__ft {
+    text-align: right;
+    color: #9853F5;
+}
+ 

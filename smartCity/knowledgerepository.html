@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-知识库</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-zhishiku.css" />   
+</head> 
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header"> 
+	     <div class="back" onclick="openWindow('./index.html');">返回</div>
+         <div class="h1">知识库</div>
+		 <div class="zimu"></div>
+	  </div>
+    </div>
+    <div id="content">
+		<div class="content">
+		
+		<div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="weui-search-bar__label" id="searchText">
+                    <i class="weui-icon-search"></i>
+                    <span>搜索</span>
+                </label>
+            </form>
+            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+        </div>
+		<div class="weui-cells">
+
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd">
+				   <img src="images/zhilin-1-34-34.png" alt="" style="width:1.1rem;margin-right:.34rem;display:block">
+				</div>
+                <div class="weui-cell__bd">
+                    <p>综合</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd">
+				  <img src="images/zhilin-2-34-34.png" alt="" style="width:1.1rem;margin-right:.34rem;display:block">
+				</div>
+                <div class="weui-cell__bd">
+                    <p>市容环境卫生</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+            </a>
+		    <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd">
+				  <img src="images/zhilin-3-34-34.png" alt="" style="width:1.1rem;margin-right:.34rem;display:block">
+				</div>
+                <div class="weui-cell__bd">
+                    <p>城市绿化</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+            </a>
+		    <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd">
+				  <img src="images/zhilin-3-34-34.png" alt="" style="width:1.1rem;margin-right:.34rem;display:block">
+				</div>
+                <div class="weui-cell__bd">
+                    <p>市政公用</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+            </a>
+			<a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd">
+				  <img src="images/zhilin-3-34-34.png" alt="" style="width:1.1rem;margin-right:.34rem;display:block">
+				</div>
+                <div class="weui-cell__bd">
+                    <p>工商行政</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+            </a>
+		 
+			
+        </div>
+		</div>	 
+     </div>
+   </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+	var myScroll; 
+    function loaded() { 
+    myScroll = new iScroll('content');
+	 
+    }  
+    window.addEventListener('load', loaded, false); 	
+ 
+</script>
+<script type="text/javascript">
+  
+    $(function(){
+        var $searchBar = $('#searchBar'),
+            $searchResult = $('#searchResult'),
+            $searchText = $('#searchText'),
+            $searchInput = $('#searchInput'),
+            $searchClear = $('#searchClear'),
+            $searchCancel = $('#searchCancel');
+
+        function hideSearchResult(){
+            $searchResult.hide();
+            $searchInput.val('');
+        }
+        function cancelSearch(){
+            hideSearchResult();
+            $searchBar.removeClass('weui-search-bar_focusing');
+            $searchText.show();
+        }
+
+        $searchText.on('click', function(){
+            $searchBar.addClass('weui-search-bar_focusing');
+            $searchInput.focus();
+        });
+        $searchInput
+            .on('blur', function () {
+                if(!this.value.length) cancelSearch();
+            })
+            .on('input', function(){
+                if(this.value.length) {
+                    $searchResult.show();
+                } else {
+                    $searchResult.hide();
+                }
+            })
+        ;
+        $searchClear.on('click', function(){
+            hideSearchResult();
+            $searchInput.focus();
+        });
+        $searchCancel.on('click', function(){
+            cancelSearch();
+            $searchInput.blur();
+        });
+    });
+</script>
+</body>
+</html> 

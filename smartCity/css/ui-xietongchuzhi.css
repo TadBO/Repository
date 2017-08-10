@@ -1,0 +1,41 @@
+﻿/*!
+ * author:zhouyu,telephone:15157151057
+ * Copyright 2017 chengyun, Inc.
+ * Licensed under the MIT license
+ */
+   
+/*xietongchuzhi*/
+ 
+.lishi{padding:0 .55rem;}
+.lishi .list{background-color: #ffffff; margin-top: .55rem;border: 1px solid #E5E5E5;}
+.lishi .list .top{padding:.53rem;border-bottom: 1px dashed #E7E7E7;}
+.lishi .list .top .title{font-size:.9rem;color: #222222;}
+.lishi .list .top .details{color:#8C8C8C;font-size:0.75rem;}
+.lishi .list .top .status{position: absolute;right: 0;top: .83rem;width:3rem;height:1.34rem;
+   text-align: center;
+   line-height: 1.34rem;
+   color:#ffffff;
+   font-size:0.65rem;  
+   background-image:url(../images/xietongchuzhi-1-54-24.png);
+   background-position:center ;
+   background-repeat:no-repeat;
+   background-size:100% auto;
+  }  
+.lishi .list .top .statustwo{position: absolute;right: 0;top: .83rem;width:3rem;height:1.34rem;
+   text-align: center;
+   line-height: 1.34rem;
+   color:#ffffff;
+   font-size:0.65rem;  
+   background-image:url(../images/xietongchuzhi-2-54-24.png);
+   background-position:center ;
+   background-repeat:no-repeat;
+   background-size:100% auto;
+  }  
+.lishi .list .info {padding:.28rem .83rem;font-size:.75rem;display: -webkit-box !important;display: box !important;color:#AEAEAE;background-color:#F9F9F9;}
+.lishi .list .info .address{-webkit-box-flex: 1;box-flex: 1;}
+.lishi .list .info .date{-webkit-box-flex: 1;box-flex: 1;text-align:right;}
+
+
+/*xianchanggaidong*/
+.page__bd.page__bd_spacing {padding: 0 15px;margin-bottom:40px;}
+.weui-btn.weui-btn_primary.gaidong-bg{background-color: #9853F5;margin-top:3.2rem;border-radius:2px;}

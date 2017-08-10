@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-沿街店家</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-xianchanggaidong.css" />   
+</head> 
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header"> 
+	     <div class="back" onclick="openWindow('./index.html');">返回</div>
+         <div class="h1">沿街店家</div>
+		 <div class="zimu" onclick="openWindow('./storesalongthewayhistory.html');">上报历史</div>
+	  </div>
+    </div>
+    <div id="content">
+		<div class="content">
+			<form action="">
+				<div class="weui-cells">
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>店家名称</p>
+						</div>
+						<div class="weui-cell__ft">
+							<input name="SELLERNAME" class=" weui-input text-right" type="text" placeholder="请输入店家名称">
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>店家地址</p>
+						</div>
+						<div class="weui-cell__ft">
+							<input name="ADDRESS" class=" weui-input text-right" type="text" placeholder="请输入店家地址">
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>负责人姓名</p>
+						</div>
+						<div class="weui-cell__ft">
+							<input name="MANAGER" class=" weui-input text-right" type="text" placeholder="请输入负责人姓名">
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>联系方式</p>
+						</div>
+						<div class="weui-cell__ft">
+							<input name="TELEPHONE" class=" weui-input text-right" type="text" placeholder="请输入联系方式">
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>经营范围</p>
+						</div>
+						<div class="weui-cell__ft">
+							<input name="JYFW" class=" weui-input text-right" type="text" placeholder="请输入经营范围">
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- 第三类-->
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<textarea name="REMARK" class="weui-textarea" placeholder="请输入描述..." rows="3"></textarea>
+							<div class="weui-textarea-counter"><span>0</span>/200</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 第六类-->
+				<div class="page__bd page__bd_spacing">
+					<a href="javascript:;" class="weui-btn weui-btn_primary gaidong-bg" id="send">上报</a>
+				</div>
+			</form>
+     </div>
+   </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+	var myScroll; 
+    function loaded() { 
+    myScroll = new iScroll('content');
+	 
+    }  
+    window.addEventListener('load', loaded, false); 	
+	$('body').click(function(e){
+		if(e.target.nodeName != "INPUT"){
+			$('input').blur();
+		};
+	})
+</script>
+<script src="js/storesalongtheway.js"></script>
+</body>
+</html> 

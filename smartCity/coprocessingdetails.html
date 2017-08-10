@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-协同处置详情</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-xietongchuzhi.css" />
+	<link rel="stylesheet" href="css/ui-weicaiji.css">
+</head> 
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header"> 
+	     <div class="back" onclick="openWindow('./coprocessing.html');">返回</div>
+         <div class="h1">协同处置</div>
+		 <div class="zimu">处理</div>
+	  </div>
+    </div>
+    <div id="content">
+		<div class="content">
+			 <!--<div class="weui-cells">-->
+				<!--<div class="weui-cell">-->
+					<!--<div class="weui-cell__bd">-->
+						<!--<p>任务发起人</p>-->
+					<!--</div>-->
+					<!--<div class="weui-cell__ft" contenteditable="true">张三</div>-->
+				<!--</div>-->
+				<!--<div class="weui-cell">-->
+					<!--<div class="weui-cell__bd">-->
+						<!--<p>任务发起时间</p>-->
+					<!--</div>-->
+					<!--<div class="weui-cell__ft" contenteditable="true">2017-7-13 15:15</div>-->
+				<!--</div>-->
+				 <!---->
+			<!--</div>-->
+		 <!---->
+		 <!---->
+		 <!---->
+		    <!--<div class="page__bd">-->
+				<!--<div class="weui-gallery" id="gallery">-->
+					<!--<span class="weui-gallery__img" id="galleryImg"></span>-->
+					<!--<div class="weui-gallery__opr">-->
+						<!--<a href="javascript:" class="weui-gallery__del">-->
+							<!--<i class="weui-icon-delete weui-icon_gallery-delete"></i>-->
+						<!--</a>-->
+					<!--</div>-->
+				<!--</div>-->
+
+				<!--<div class="weui-cells weui-cells_form">-->
+					<!--<div class="weui-cell">-->
+						<!--<div class="weui-cell__bd">-->
+							<!--<div class="weui-uploader">-->
+								<!--<div class="weui-uploader__hd">-->
+									<!--<p class="weui-uploader__title">现场照片</p>-->
+								 <!---->
+								<!--</div>-->
+								<!--<div class="weui-uploader__bd">-->
+									<!--<ul class="weui-uploader__files" id="uploaderFiles">-->
+										<!--<img class="weui-uploader__file" src="./images/index-1-20-20.png" alt="">-->
+									<!--</ul>-->
+									<!--<div >-->
+
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!---->
+			 <!---->
+			<!--<div class="weui-cells weui-cells_form">-->
+			    <!--<div style="padding: 10px 15px;">-->
+					<!--<p class="weui-uploader__title">任务描述</p>		 -->
+			    <!--</div>-->
+				<!--<div class="weui-cell">-->
+					<!--<div class="weui-cell__bd">-->
+						<!--<textarea class="weui-textarea" placeholder="" rows="3">你好-->
+						<!--</textarea>-->
+						<!--<div class="weui-textarea-counter"><span>0</span>/200</div>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!---->
+		    <!--&lt;!&ndash; 第六类&ndash;&gt;-->
+			<!--<div class="page__bd page__bd_spacing">-->
+			   <!--<a href="javascript:;" class="weui-btn weui-btn_primary gaidong-bg">上报</a> -->
+			<!--</div>-->
+     </div>
+   </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/template.js"></script>
+<script>
+	var myScroll; 
+    function loaded() { 
+    myScroll = new iScroll('content');
+	 
+    }  
+    window.addEventListener('load', loaded, false); 	
+	$('body').click(function(e){
+		if(e.target.nodeName != "INPUT"){
+			$('input').blur();
+		};
+	})
+</script>
+<script src="js/coproceDetails.js"></script>
+<script type="text/html" id="detail">
+	<div class="weui-cells">
+		<div class="weui-cell">
+			<div class="weui-cell__bd">
+				<p>任务发起人</p>
+			</div>
+			<div class="weui-cell__ft" contenteditable="true">{{ user_qqr }}</div>
+		</div>
+		<div class="weui-cell">
+			<div class="weui-cell__bd">
+				<p>任务发起时间</p>
+			</div>
+			<div class="weui-cell__ft" contenteditable="true">{{ time_qinq | dateFormat }}</div>
+		</div>
+
+	</div>
+
+
+
+	<div class="page__bd">
+		<div class="weui-gallery" id="gallery">
+			<span class="weui-gallery__img" id="galleryImg"></span>
+			<div class="weui-gallery__opr">
+				<a href="javascript:" class="weui-gallery__del">
+					<i class="weui-icon-delete weui-icon_gallery-delete"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="weui-cells weui-cells_form">
+			<div class="weui-cell">
+				<div class="weui-cell__bd">
+					<div class="weui-uploader">
+						<div class="weui-uploader__hd">
+							<p class="weui-uploader__title">现场照片</p>
+
+						</div>
+						<div class="weui-uploader__bd">
+							<ul class="weui-uploader__files" id="uploaderFiles">
+								<img class="weui-uploader__file" src="./images/index-1-20-20.png" alt="">
+							</ul>
+							<div >
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="weui-cells weui-cells_form">
+		<div style="padding: 10px 15px;">
+			<p class="weui-uploader__title">任务描述</p>
+		</div>
+		<div class="weui-cell">
+			<div class="weui-cell__bd">
+						<textarea class="weui-textarea" placeholder="" rows="3">你好
+						</textarea>
+				<div class="weui-textarea-counter"><span>0</span>/200</div>
+			</div>
+		</div>
+	</div>
+	<!-- 第六类-->
+	{{ if js_state == 0 }}
+	<div class="page__bd page__bd_spacing">
+		<a href="javascript:;" class="weui-btn weui-btn_primary gaidong-bg accept">接收</a>
+	</div>
+	{{ /if }}
+</script>
+</body>
+</html> 

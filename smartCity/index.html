@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-首页</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-index.css" />
+<script  type="text/javascript" src="js/android.js"></script>
+</head> 
+<body ontouchstart>
+<div id="wrap">
+	<div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header"> 
+         <div class="h1">首页</div>
+	  </div>
+    </div>
+	   
+    <div id="content">
+        <div class="content">
+		    <div class="box">
+			   <!--<div class="list" onclick="openWindow('./weicaiji.html');">微采集</div>-->
+			   <!--<div class="list" onclick="openWindow('./xietong.html');">协同请求</div>-->
+			   <!--<div class="list" onclick="openWindow('./sign.html');">签到签退</div>-->
+			</div>
+		
+		    <div class="info">
+			   <div class="top">信息上报</div>
+			   <div class="lists one">
+			        <!--<div class="list" onclick="openWindow('./sitemodification.html');">现场改动</div>-->
+				    <!--<div class="list" onclick="showToasts()">简易流程</div>-->
+				    <!--<div class="list" onclick="openWindow('./illegalreminder.html');">违停上报</div>-->
+				    <!--<div class="list" onclick="openWindow('./storesalongtheway.html');">沿街店家</div>-->
+			   </div>
+			</div>
+		
+		      <div class="info">
+			   <div class="top">任务接收</div>
+			   <div class="lists two">
+			        <!--<div class="list" onclick="openWindow('./OAassign.html');">OA交办<span>2</span></div>-->
+				    <!--<div class="list" onclick="openWindow('./OAassign.html');">数字城管<span>2</span></div>-->
+				    <!--<div class="list" onclick="openWindow('./coprocessing.html');">协同处置<span>2</span></div>-->
+				    <!--<div class="list" onclick="openWindow('./ordermessage.html');">指令消息<span>2</span></div>-->
+			   </div>
+			</div>
+		    
+		    <div class="info">
+			   <div class="top">信息查询</div>
+			   <div class="lists three">
+			        <!--<div class="list" onclick="openWindow('./approvalsearch.html');">审批查阅</div>-->
+				    <!--<div class="list" onclick="openWindow('./knowledgerepository.html');">知识库</div>-->
+				    <!--<div class="list" onclick="openWindow('./laweventlibrary.html');">事件库</div>  -->
+			   </div>
+			</div>
+		
+		
+		</div>
+    </div>
+    <div id="footer">
+	          <div class="weui-tabbar"> 
+                <a href="javascript:;" class="weui-tabbar__item" onclick="openWindow('./index.html')">
+                    <img src="images/index-1-20-20.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">首页</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item" onclick="openWindow('./news.html')">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="images/index-2-20-20.png" alt="" class="weui-tabbar__icon">
+                        <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
+                    </span>
+                    <p class="weui-tabbar__label">消息</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item" onclick="openWindow('./my.html')">
+                    <img src="images/index-3-20-20.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">我</p>
+                </a>
+            </div>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/template.js"></script>
+<script>
+	var myScroll;
+    function loaded() {
+     myScroll = new iScroll('content');
+    }
+    window.addEventListener('load', loaded, false);
+</script>
+<script src="js/index.js"></script>
+<script type="text/html" id="nav">
+	{{ each Menu.Tops as value }}
+	<div class="list" onclick="openWindow('{{ value.url }}');">{{ value.title }}</div>
+	{{ /each }}
+</script>
+<script type="text/html" id="task">
+	{{ each Menu.Items as value }}
+	<div class="list" onclick="openWindow('{{ value.url }}');">{{ value.title }}<span>2</span></div>
+	{{ /each }}
+</script>
+
+<script type="text/html" id="message">
+	{{ each Menu.Messages as value }}
+	<div class="list" onclick="openWindow('{{ value.url }}');">{{ value.title }}</div>
+	{{ /each }}
+</script>
+
+<script type="text/html" id="search">
+	{{ each Menu.Search as value }}
+	<div class="list" onclick="openWindow('{{ value.url }}');">{{ value.title }}</div>
+	{{ /each }}
+</script>
+</body>
+</html> 

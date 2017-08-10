@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>城管-事件详情</title>
+    <link rel="stylesheet" href="css/ui-media.css" />
+    <link rel="stylesheet" href="css/ui-component.css"/>
+    <link rel="stylesheet" href="css/ui-common.css"/>
+    <link rel="stylesheet" href="css/ui-xianchanggaidong.css" />
+    <link rel="stylesheet" href="css/ui-dossierDetails.css">
+</head>
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+        <div class="header">
+            <div class="back" onclick="openWindow('./shangbaohistory.html?type=' + GetQueryString('type'));">返回</div>
+            <div class="h1">事件详情</div>
+            <div class="zimu"></div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="content">
+            <!--<div class="weui-cells">-->
+                <!--<div class="weui-cell">-->
+                    <!--<div class="weui-cell__bd">-->
+                        <!--<p>事件标题</p>-->
+                    <!--</div>-->
+                    <!--<div class="weui-cell__ft">无照经营游商</div>-->
+                <!--</div>-->
+                <!--<div class="weui-cell">-->
+                    <!--<div class="weui-cell__bd">-->
+                        <!--<p>当事人姓名</p>-->
+                    <!--</div>-->
+                    <!--<div class="weui-cell__ft">李斯</div>-->
+                <!--</div>-->
+                <!--<div class="weui-cell">-->
+                    <!--<div class="weui-cell__bd">-->
+                        <!--<p>联系方式</p>-->
+                    <!--</div>-->
+                    <!--<div class="weui-cell__ft">13524687954</div>-->
+                <!--</div>-->
+                <!--<div class="weui-cell">-->
+                    <!--<div class="weui-cell__bd">-->
+                        <!--<p>事件地址</p>-->
+                    <!--</div>-->
+                    <!--<div class="weui-cell__ft">文三路128号</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--&lt;!&ndash; 第二类&ndash;&gt;-->
+            <!--<div class="weui-cells">-->
+                <!--<a class="weui-cell weui-cell_access" href="javascript:;">-->
+                    <!--<div class="weui-cell__bd">-->
+                        <!--<p>问题大类</p>-->
+                    <!--</div>-->
+                    <!--<div class="weui-cell__ft">-->
+                        <!--市容环境-->
+                    <!--</div>-->
+                <!--</a>-->
+                <!--<a class="weui-cell weui-cell_access" href="javascript:;">-->
+                    <!--<div class="weui-cell__bd">-->
+                        <!--<p>问题小类</p>-->
+                    <!--</div>-->
+                    <!--<div class="weui-cell__ft">-->
+                        <!--无照经营-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+
+
+            <!--&lt;!&ndash; 第三类&ndash;&gt;-->
+
+            <!--<div class="weui-cell__bd dossierDetails">-->
+                <!--<div class="title">-->
+                    <!--事件描述-->
+                <!--</div>-->
+                <!--<div class="info">某某等一些描述</div>-->
+            <!--</div>-->
+
+            <!--&lt;!&ndash; 第四类&ndash;&gt;-->
+            <!--<div class="page__bd">-->
+                <!--<div class="weui-gallery" id="gallery">-->
+                    <!--<span class="weui-gallery__img" id="galleryImg"></span>-->
+                    <!--<div class="weui-gallery__opr">-->
+                        <!--<a href="javascript:" class="weui-gallery__del">-->
+                            <!--<i class="weui-icon-delete weui-icon_gallery-delete"></i>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="dossierPhotos dossierDetails">-->
+                    <!--<div class="title">处理前</div>-->
+                    <!--<img src="./images/nick.png" alt="占位图">-->
+                <!--</div>-->
+
+
+            <!--</div>-->
+
+            <!--&lt;!&ndash; 第五类&ndash;&gt;-->
+            <!--<div class="page__bd">-->
+                <!--<div class="weui-gallery" id="gallery2">-->
+                    <!--<span class="weui-gallery__img" id="galleryImg2"></span>-->
+                    <!--<div class="weui-gallery__opr">-->
+                        <!--<a href="javascript:" class="weui-gallery__del">-->
+                            <!--<i class="weui-icon-delete weui-icon_gallery-delete"></i>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="dossierPhotos dossierDetails">-->
+                    <!--<div class="title">处理后</div>-->
+                    <!--<img src="./images/nick.png" alt="占位图">-->
+                <!--</div>-->
+            <!--</div>-->
+
+        </div>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/template.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+    var myScroll;
+    function loaded() {
+        myScroll = new iScroll('content');
+
+    }
+    window.addEventListener('load', loaded, false);
+    $('body').click(function(e){
+        if(e.target.nodeName != "INPUT"){
+            $('input').blur();
+        };
+    })
+</script>
+<script src="js/eventDetails.js"></script>
+<script type="text/html" id="detail">
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>事件标题</p>
+            </div>
+            <div class="weui-cell__ft">{{ even_no }}</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>当事人姓名</p>
+            </div>
+            <div class="weui-cell__ft">{{ name }}</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>联系方式</p>
+            </div>
+            <div class="weui-cell__ft">{{ phoneno }}</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>事件地址</p>
+            </div>
+            <div class="weui-cell__ft">{{ even_addr }}</div>
+        </div>
+    </div>
+
+    <!-- 第二类-->
+    <div class="weui-cells">
+        <!--<a class="weui-cell weui-cell_access" href="javascript:;">-->
+            <!--<div class="weui-cell__bd">-->
+                <!--<p>问题大类</p>-->
+            <!--</div>-->
+            <!--<div class="weui-cell__ft">-->
+                <!--{{ even_fenls }}-->
+            <!--</div>-->
+        <!--</a>-->
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+            <div class="weui-cell__bd">
+                <p>问题小类</p>
+            </div>
+            <div class="weui-cell__ft">
+                {{ even_fenls }}
+            </div>
+        </a>
+    </div>
+
+
+    <!-- 第三类-->
+
+    <div class="weui-cell__bd dossierDetails">
+        <div class="title">
+            事件描述
+        </div>
+        <div class="info">{{ description }}</div>
+    </div>
+
+    <div class="weui-cell__bd dossierDetails">
+        <div class="title">
+            意见
+        </div>
+        <div class="info">{{ yijian }}</div>
+    </div>
+    <!-- 第四类-->
+    <div class="page__bd">
+        <div class="weui-gallery" id="gallery">
+            <span class="weui-gallery__img" id="galleryImg"></span>
+            <div class="weui-gallery__opr">
+                <a href="javascript:" class="weui-gallery__del">
+                    <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="dossierPhotos dossierDetails">
+            <div class="title">处理前</div>
+            <img src="./images/nick.png" alt="占位图">
+        </div>
+
+
+    </div>
+
+    <!-- 第五类-->
+    <div class="page__bd">
+        <div class="weui-gallery" id="gallery2">
+            <span class="weui-gallery__img" id="galleryImg2"></span>
+            <div class="weui-gallery__opr">
+                <a href="javascript:" class="weui-gallery__del">
+                    <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="dossierPhotos dossierDetails">
+            <div class="title">处理后</div>
+            <img src="./images/nick.png" alt="占位图">
+        </div>
+    </div>
+</script>
+</body>
+</html>

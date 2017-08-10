@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>城管-历史详情</title>
+    <link rel="stylesheet" href="css/ui-media.css" />
+    <link rel="stylesheet" href="css/ui-component.css"/>
+    <link rel="stylesheet" href="css/ui-common.css"/>
+    <link rel="stylesheet" href="css/ui-dossierDetails.css">
+</head>
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+        <div class="header">
+            <div class="back" onclick="openWindow('./initiateHistory.html');">返回</div>
+            <div class="h1">事件详情</div>
+            <div class="zimu"></div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="content">
+            <!--<div class="dossierDetails">-->
+                <!--<div class="title">事件描述</div>-->
+                <!--<div class="info">某某等一些描述</div>-->
+            <!--</div>-->
+            <!--<div class="dossierPhotos dossierDetails">-->
+                <!--<div class="title">现场照片</div>-->
+                <!--<img src="./images/nick.png" alt="占位图">-->
+            <!--</div>-->
+            <!--<div class="dossierType">-->
+                <!--<a class="weui-cell weui-cell_access" href="javascript:;">-->
+                    <!--<div class="weui-cell__bd">-->
+                        <!--<p class="title">流转部门</p>-->
+                    <!--</div>-->
+                    <!--<div class="weui-cell__ft info">-->
+                        <!--第一中队-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="dossierType dossierAdress">-->
+                <!--<a class="weui-cell weui-cell_access" href="javascript:;">-->
+                    <!--<div class="weui-cell__bd">-->
+                        <!--<p class="title">流转人员</p>-->
+                    <!--</div>-->
+                    <!--<div class="weui-cell__ft info">-->
+                        <!--李四-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+
+        </div>
+    </div>
+</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/template.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+    var myScroll;
+    function loaded() {
+        myScroll = new iScroll('content');
+
+    }
+    window.addEventListener('load', loaded, false);
+    $('body').click(function(e){
+        if(e.target.nodeName != "INPUT"){
+            $('input').blur();
+        };
+    })
+</script>
+<script src="js/initiateDetails.js"></script>
+<script type="text/html" id="detail">
+    <div class="dossierDetails">
+        <div class="title">事件描述</div>
+        <div class="info">{{ description }}</div>
+    </div>
+    <div class="dossierPhotos dossierDetails">
+        <div class="title">现场照片</div>
+        <img src="./images/nick.png" alt="占位图">
+    </div>
+    <div class="dossierType">
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+            <div class="weui-cell__bd">
+                <p class="title">流转部门</p>
+            </div>
+            <div class="weui-cell__ft info">
+                {{ xtdpt }}
+            </div>
+        </a>
+    </div>
+    <div class="dossierType dossierAdress">
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+            <div class="weui-cell__bd">
+                <p class="title">流转人员</p>
+            </div>
+            <div class="weui-cell__ft info">
+                {{ user_xtr }}
+            </div>
+        </a>
+    </div>
+</script>
+</body>
+</html>

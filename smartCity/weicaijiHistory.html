@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>城管-上报历史</title>
+    <link rel="stylesheet" href="css/ui-media.css" />
+    <link rel="stylesheet" href="css/ui-component.css"/>
+    <link rel="stylesheet" href="css/ui-common.css"/>
+    <link rel="stylesheet" href="css/ui-xianchanggaidong.css" />
+    <link rel="stylesheet" href="css/ui-weicaijiHistory.css">
+</head>
+<body load>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+        <div class="header">
+            <div class="back" onclick="openWindow('./weicaiji.html');">返回</div>
+            <div class="h1">上报历史</div>
+            <div class="zimu"></div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div class="content">
+            <ul class="lishi" id="thelist">
+                <!--<li class="list" onclick="openWindow('./dossierDetails.html')">-->
+                <!--<div class="top">-->
+                    <!--<div class="title">无照经营商游</div>-->
+                    <!--<div class="details">道路无照经营商游......</div>-->
+                <!--</div>-->
+                <!--<div class="info">-->
+                    <!--<div class="address">文三路128</div>-->
+                    <!--<div class="date">2017-7-12 6:30</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+
+                <!--<li class="list">-->
+                    <!--<div class="top">-->
+                        <!--<div class="title">无照经营商游</div>-->
+                        <!--<div class="details">道路无照经营商游......</div>-->
+                    <!--</div>-->
+                    <!--<div class="info">-->
+                        <!--<div class="address">文三路128</div>-->
+                        <!--<div class="date">2017-7-12 6:30</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+
+
+                <!--<li class="list">-->
+                    <!--<div class="top">-->
+                        <!--<div class="title">无照经营商游</div>-->
+                        <!--<div class="details">道路无照经营商游......</div>-->
+                    <!--</div>-->
+                    <!--<div class="info">-->
+                        <!--<div class="address">文三路128</div>-->
+                        <!--<div class="date">2017-7-12 6:30</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+
+
+                <!--<li class="list">-->
+                    <!--<div class="top">-->
+                        <!--<div class="title">无照经营商游</div>-->
+                        <!--<div class="details">道路无照经营商游......</div>-->
+                    <!--</div>-->
+                    <!--<div class="info">-->
+                        <!--<div class="address">文三路128</div>-->
+                        <!--<div class="date">2017-7-12 6:30</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+
+            </ul>
+            <div id="pullUp">
+                <span class="pullUpLabel">上拉加载更多</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/template.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<!--<script src="js/wcjHistoryList.js"></script>-->
+<script src="js/pullUp.js"></script>
+<!--<script>-->
+    <!--var myScroll;-->
+<!--//    function loaded() {-->
+<!--//        myScroll = new iScroll('content');-->
+<!--//-->
+<!--//    }-->
+<!--//    window.addEventListener('load', loaded, false);-->
+    <!--myScroll = new iScroll('content',{useTransition: true})-->
+    <!--$('body').click(function(e){-->
+        <!--if(e.target.nodeName != "INPUT"){-->
+            <!--$('input').blur();-->
+        <!--};-->
+    <!--});-->
+
+<!--</script>-->
+<script type="text/html" id="historyList">
+    {{ each eventlist as value }}
+    <li class="list" onclick="openWindow('./dossierDetails.html?id={{ value.id }}')">
+        <div class="top">
+            <div class="title">{{ value.even_fenls }}</div>
+            <div class="details">{{ value.description }}</div>
+        </div>
+        <div class="info">
+            <div class="address">{{ value.even_addr }}</div>
+            <div class="date">{{ value.time_shb | dateFormat }}</div>
+        </div>
+    </li>
+    {{ /each }}
+</script>
+</body>
+</html>

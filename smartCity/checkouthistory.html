@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-签入签出</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-signincheckout.css" />   
+</head> 
+<body ontouchstart>
+<div id="wrap">
+	<div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header"> 
+	     <div class="back" onclick="openWindow('./sign.html');">返回</div>
+         <div class="h1">考勤历史</div>
+		 <div class="zimu"></div>
+	  </div>
+    </div>
+	 
+    <div id="content">
+        <div class="content">
+		    <ul class="lists">
+			  <li class="list">
+			      <div class="date">今天</div>
+				  <div class="datalis">
+				    <div class="signtime">
+					    <p>已签到</p>
+						<span>9：00</span>
+					</div>
+					<div class="checkout">
+					    <p>已退签</p>
+						<span>18:00</span>
+					</div>
+				  </div>
+			  </li>
+			  
+			  <li class="list">
+			      <div class="date">昨天</div>
+				  <div class="datalis">
+				    <div class="signtime">
+					    <p>已签到</p>
+						<span>9：00</span>
+					</div>
+					<div class="checkout">
+					    <p>已退签</p>
+						<span>18:00</span>
+					</div>
+				  </div>
+			  </li>
+			  
+			  <li class="list">
+			      <div class="date">前天</div>
+				  <div class="datalis">
+				    <div class="signtime">
+					    <p>已签到</p>
+						<span>9：00</span>
+					</div>
+					<div class="checkout">
+					    <p>已退签</p>
+						<span>18:00</span>
+					</div>
+				  </div>
+			  </li>
+			  
+			  <li class="list">
+			      <div class="date">2017-07-11</div>
+				  <div class="datalis">
+				    <div class="signtime">
+					    <p>已签到</p>
+						<span>9：00</span>
+					</div>
+					<div class="checkout">
+					    <p>已退签</p>
+						<span>18:00</span>
+					</div>
+				  </div>
+			  </li>
+			  
+			  <li class="list">
+			      <div class="date">2017-07-10</div>
+				  <div class="datalis">
+				    <div class="signtime">
+					    <p>已签到</p>
+						<span>9：00</span>
+					</div>
+					<div class="checkout">
+					    <p>已退签</p>
+						<span>18:00</span>
+					</div>
+				  </div>
+			  </li>
+			  
+			  <li class="list">
+			      <div class="date">2017-07-09</div>
+				  <div class="datalis">
+				    <div class="signtime">
+					    <p>已签到</p>
+						<span>9：00</span>
+					</div>
+					<div class="checkout">
+					    <p>已退签</p>
+						<span>18:00</span>
+					</div>
+				  </div>
+			  </li>
+			  
+			  <li class="list">
+			      <div class="date">2017-07-08</div>
+				  <div class="datalis">
+				    <div class="signtime">
+					    <p>已签到</p>
+						<span>9：00</span>
+					</div>
+					<div class="checkout">
+					    <p>已退签</p>
+						<span>18:00</span>
+					</div>
+				  </div>
+			  </li>
+			  
+			</ul>
+		</div>
+    </div>
+    <div id="footer">
+    </div>
+ </div>
+<script src="js/zepto.min.js"></script>
+<script src="js/template.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/checkouthistory.js"></script>
+<script>
+	var myScroll; 
+    function loaded() { 
+    myScroll = new iScroll('content');
+	 
+    }  
+    window.addEventListener('load', loaded, false); 	
+	$('body').click(function(e){
+		if(e.target.nodeName != "INPUT"){
+			$('input').blur();
+		};
+	})
+</script>
+<script type="text/html" id="checkoutList">
+	{{ each qianDaolist as value }}
+	<li class="list">
+		<div class="date">{{ value.created_at | dateFormat }}</div>
+		<div class="datalis">
+			{{ if value.qd_state == 1 }}
+			<div class="signtime">
+				<p>已签到</p>
+				<span>{{ value.time_qd | timeFormat }}</span>
+			</div>
+			{{ else if value.qd_state == 0 }}
+			<div class="signtime">
+
+			</div>
+			{{ /if }}
+			{{ if value.qt_state == 1 }}
+			<div class="checkout">
+				<p>已退签</p>
+				<span>{{ value.time_qt | timeFormat }}</span>
+			</div>
+			{{ else if value.qt_state == 0 }}
+			<div class="checkout">
+				<p>未签退</p>
+			</div>
+			{{ /if }}
+		</div>
+	</li>
+	{{ /each}}
+</script>
+</body>
+</html> 

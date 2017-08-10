@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>城管-案卷详情</title>
+    <link rel="stylesheet" href="css/ui-media.css" />
+    <link rel="stylesheet" href="css/ui-component.css"/>
+    <link rel="stylesheet" href="css/ui-common.css"/>
+    <link rel="stylesheet" href="css/ui-dossierDetails.css">
+</head>
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+        <div class="header">
+            <div class="back" onclick="openWindow('./weicaijiHistory.html');">返回</div>
+            <div class="h1">案卷详情</div>
+            <div class="zimu"></div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="content">
+            <!--<div class="dossierType">-->
+                <!--<a class="weui-cell weui-cell_access" href="javascript:;">-->
+                    <!--<div class="weui-cell__bd">-->
+                        <!--<p class="title">案卷详情</p>-->
+                    <!--</div>-->
+                    <!--<div class="weui-cell__ft info">-->
+                        <!--{{ even_fenls }}-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="dossierType dossierAdress">-->
+                <!--<div class="weui-cell">-->
+                    <!--<div class="weui-cell__bd">-->
+                        <!--<p class="title">事件地址</p>-->
+                    <!--</div>-->
+                    <!--<div class=" info">-->
+                        <!--瓜沥镇瓜渔路180号-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="dossierDetails">-->
+                <!--<div class="title">事件描述</div>-->
+                <!--<div class="info">某某等一些描述</div>-->
+            <!--</div>-->
+            <!--<div class="dossierPhotos dossierDetails">-->
+                <!--<div class="title">现场照片</div>-->
+                <!--<img src="./images/nick.png" alt="占位图">-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/template.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/dossierDetails.js"></script>
+<script>
+    var myScroll;
+    function loaded() {
+        myScroll = new iScroll('content');
+
+    }
+    window.addEventListener('load', loaded, false);
+    $('body').click(function(e){
+        if(e.target.nodeName != "INPUT"){
+            $('input').blur();
+        };
+    })
+</script>
+<script type="text/html" id="detail">
+    <div class="dossierType">
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+            <div class="weui-cell__bd">
+                <p class="title">案卷详情</p>
+            </div>
+            <div class="weui-cell__ft info">
+                {{ even_fenls }}
+            </div>
+        </a>
+    </div>
+    <div class="dossierType dossierAdress">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p class="title">事件地址</p>
+            </div>
+            <div class=" info">
+                {{ even_addr }}
+            </div>
+        </div>
+    </div>
+    <div class="dossierDetails">
+        <div class="title">事件描述</div>
+        <div class="info">{{ description }}</div>
+    </div>
+    <div class="dossierPhotos dossierDetails">
+        <div class="title">现场照片</div>
+        <img src="{{ eclf }}" alt="占位图">
+    </div>
+</script>
+</body>
+</html>

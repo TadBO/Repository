@@ -1,0 +1,138 @@
+html, body {
+    height: 100%;
+}
+
+.event {
+    /*height: 100%;*/
+    width: 100%;
+    display: none;
+}
+.event .mask {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+.event .body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+}
+.event .weui-cells {
+    height: 100%;
+    background-color: inherit;
+}
+.body .top {
+    height:1.8rem;
+}
+.body-left {
+    /*width: 5.625rem;*/
+    height: 100%;
+    background-color: #fff;
+}
+.body-left ul {
+    height: 100%;
+}
+.body-left ul li {
+    font-size: 16px;
+    padding:0 16px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+.body-left ul .active span {
+    position: absolute;
+    width: 4px;
+    height: 16px;
+    background-color: #9853F5;
+    left: 0;
+    top: 12px;
+}
+/*.body-left ul li::after {*/
+    /*content: " ";*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*height: 1px;*/
+    /*border-top: 1px solid #e5e5e5;*/
+    /*color: #e5e5e5;*/
+    /*-webkit-transform-origin: 0 0;*/
+    /*transform-origin: 0 0;*/
+    /*-webkit-transform: scaleY(0.5);*/
+    /*transform: scaleY(0.5);*/
+    /*z-index: 2;*/
+    /*margin-left: 15px;*/
+/*}*/
+.fl {
+    float: left;
+}
+.body-right {
+    padding-left: 4px;
+    height: 100%;
+    overflow: hidden;
+}
+.body-right ul {
+    font-size: 14px;
+    height: 100%;
+    background-color: #fff;
+}
+.body-right .weui-cells:before {
+    display: none;
+}
+.body-right .type {
+    background-color: #fff;
+}
+.body-left .type::after, .body-right .type::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #e5e5e5;
+    color: #e5e5e5;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    z-index: 2;
+    margin-left: 15px;
+}
+.weui-cell__bd {
+    font-size: 14px;
+}
+.active {
+    color: #9853F5;
+}
+.body-right .weui-cells:after {
+    margin-left: 15px;
+}
+.warn {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    background-color: #FCFFE1;
+    color: #FF5656;
+    display: none;
+}
+.warn span {
+    display: inline-block;
+    float: left;
+    margin: 7px 8px 0 15px;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/warn-big-1.png");
+    background-size: 16px 16px;
+}

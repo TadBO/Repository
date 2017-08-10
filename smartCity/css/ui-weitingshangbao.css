@@ -1,0 +1,22 @@
+﻿ 
+/*weizhangtixin*/
+
+.lishi{padding:0 10px;}
+.lishi .list{background-color: #ffffff; margin-top: 0.55rem;border: 1px solid #E5E5E5;}
+.lishi .list:last-child{margin-bottom:0.55rem;}
+.lishi .list .top{padding:0.83rem;border-bottom: 1px dashed #E7E7E7;}
+.lishi .list .top .title{font-size:0.9rem;color: #222222;}
+.lishi .list .top .time{position: absolute;right: 0;top: 0.55rem;width:4.78rem;height:1.34rem;
+   text-align: center;
+   line-height: 1.34rem;
+   color:#ffffff;
+   font-size:0.75rem;  
+   background-image:url(../images/weizhangtixin-1-86-24.png);
+   background-position:center ;
+   background-repeat:no-repeat;
+   background-size:100% auto;
+  }
+
+.lishi .list .info {padding:0.28rem 0.83rem;font-size:0.75rem;display: -webkit-box !important;display: box !important;color:#AEAEAE;background-color:#F9F9F9;}
+ 
+.lishi .list .info .date{-webkit-box-flex: 1;box-flex: 1;text-align:right;}

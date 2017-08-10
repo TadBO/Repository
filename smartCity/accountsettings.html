@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-账号设置</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/>
+	<link rel="stylesheet" href="css/ui-xianchanggaidong.css">
+<link rel="stylesheet" href="css/ui-personinfo.css" />
+	<script src="js/android.js"></script>
+</head> 
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header">
+		  <div class="back" onclick="openWindow('./my.html')">返回</div>
+		  <div class="h1">账号设置</div>
+		  <div class="space space-save"></div>
+	  </div>
+	</div>
+    <div id="content">
+		<div class="content">
+			<form action="">
+				<div class="weui-cells">
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>登录名</p>
+						</div>
+						<div class="weui-cell__ft">chris</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>手机号</p>
+						</div>
+						<div class="weui-cell__ft">
+							<div class="weui-cell__ft">15186792676</div>
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>修改密码</p>
+						</div>
+						<div class="weui-cell__ft">
+							<div class="modify" onclick="openWindow('./modifypassword.html')">
+								<img src="images/account-1-16-16.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!--第二行 -->
+
+				<div class="weui-cells">
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>组织</p>
+						</div>
+						<div class="weui-cell__ft">
+							<div class="weui-cell__ft">望江街道</div>
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>部门</p>
+						</div>
+						<div class="weui-cell__ft">
+							<div class="weui-cell__ft">城管科</div>
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>职务</p>
+						</div>
+						<div class="weui-cell__ft">
+							<div class="weui-cell__ft">城管科科员</div>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="page__bd page__bd_spacing">
+				<a href="javascript:;" class="weui-btn weui-btn_primary gaidong-bg" id="signOut" onclick="android.signOut()">退出登录</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+</body>
+</html> 

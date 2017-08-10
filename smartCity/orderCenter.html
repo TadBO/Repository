@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>城管-指挥中心</title>
+    <link rel="stylesheet" href="css/ui-media.css" />
+    <link rel="stylesheet" href="css/ui-component.css"/>
+    <link rel="stylesheet" href="css/ui-common.css"/>
+    <link rel="stylesheet" href="css/ui-news.css" />
+    <link rel="stylesheet" href="css/ui-xianchanggaidong.css" />
+    <link rel="stylesheet" href="css/ui-orderCenter.css" />
+</head>
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+        <div class="header">
+            <div class="back" onclick="openWindow('./ordermessage.html')">返回</div>
+            <div class="h1">指挥中心</div>
+            <div class="zimu"></div>
+        </div>
+    </div>
+
+
+    <div id="content">
+        <div class="content">
+            <ul class="lists">
+                <li class="list">
+                    <div class="time">今天 09:28</div>
+                    <div class="details">
+                        <div class="detailsCon">
+                            张三于02-23 13：21对您发起协同请求 【萧绍路34号出现出店经营，老板拒不 整改，请速过来支持。】
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer">
+            <div class="top">
+                <div class="weui-cell weui-cell_select weui-cell_select-before">
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" placeholder="请输入内容">
+                    </div>
+                    <a href="javascript:void(0);" class="more">
+                        <img src="./images/28-28.png" alt="">
+                    </a>
+                    <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary gaidong-bg">发送</a>
+                </div>
+            </div>
+            <div class="bottom">
+                <a href="javascript:void(0);">
+                    <img src="./images/1-54-54.png" alt="">
+                    <span>拍照</span>
+                </a>
+                <a href="javascript:void(0);">
+                    <img src="./images/2-54-54.png" alt="">
+                    <span>相册</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+    var myScroll;
+    function loaded() {
+        myScroll = new iScroll('content');
+
+    }
+    window.addEventListener('load', loaded, false);
+    $('body').click(function(e){
+        if(e.target.nodeName != "INPUT"){
+            $('input').blur();
+        };
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿/*shengpichaxun*/
+.page__bd.page__bd_spacing {padding: 0 15px;margin-bottom:40px;}
+.weui-btn.weui-btn_primary.gaidong-bg{background-color: #9853F5;margin-top:1.2rem;border-radius:2px;}
+
+/*shengpichaxunxaingqing*/
+
+.lishi{padding:0 .55rem;}
+.lishi .list{background-color: #ffffff; margin-top: .55rem;border: 1px solid #E5E5E5;}
+.lishi .list .top{padding:.83rem;border-bottom: 1px dashed #E7E7E7;}
+.lishi .list .top .title{font-size:.9rem;color: #222222;}
+.lishi .list .top .details{color:#8C8C8C;font-size:0.75rem;}
+
+.lishi .list .info {padding:.28rem .83rem;font-size:.75rem;display: -webkit-box !important;display: box !important;color:#AEAEAE;background-color:#F9F9F9;}
+.lishi .list .info .address{-webkit-box-flex: 1;box-flex: 1;}
+.lishi .list .info .date{-webkit-box-flex: 1;box-flex: 1;text-align:right;}

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-违章提醒</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-weitingshangbao.css" />   
+</head> 
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header"> 
+	     <div class="back" onclick="openWindow('./index.html');">返回</div>
+         <div class="h1">违章提醒</div>
+		 <div class="zimu" onclick="capturePlate()">车牌识别</div>
+	  </div>
+    </div>
+    <div id="content">
+		<div class="content">
+		   
+           <ul class="lishi">
+             <li class="list" onclick="openWindow('./illegalDetails.html')">
+			   <div class="top">
+			      <div class="title">无照经营商游</div>
+				  <div class="time">剩余06:23</div>
+			   </div>
+			   <div class="info">
+				  <div class="date">2017-7-12 6:30</div>
+			   </div>
+			 </li>
+			 
+			 <li class="list">
+			   <div class="top">
+			      <div class="title">无照经营商游</div>
+				  <div class="time">剩余06:23</div>
+			   </div>
+			   <div class="info">
+				  <div class="date">2017-7-12 6:30</div>
+			   </div>
+			 </li>
+			 
+			 <li class="list">
+			   <div class="top">
+			      <div class="title">无照经营商游</div>
+				  <div class="time">剩余06:23</div>
+			   </div>
+			   <div class="info">
+				  <div class="date">2017-7-12 6:30</div>
+			   </div>
+			 </li>
+			 
+			 <li class="list">
+			   <div class="top">
+			      <div class="title">无照经营商游</div>
+				  <div class="time">剩余06:23</div>
+			   </div>
+			   <div class="info">
+				  <div class="date">2017-7-12 6:30</div>
+			   </div>
+			 </li>
+			 
+			  <li class="list">
+			   <div class="top">
+			      <div class="title">无照经营商游</div>
+				  <div class="time">剩余06:23</div>
+			   </div>
+			   <div class="info">
+				  <div class="date">2017-7-12 6:30</div>
+			   </div>
+			 </li>
+			 
+			 <li class="list">
+			   <div class="top">
+			      <div class="title">无照经营商游</div>
+				  <div class="time">剩余06:23</div>
+			   </div>
+			   <div class="info">
+				  <div class="date">2017-7-12 6:30</div>
+			   </div>
+			 </li>
+			 
+			  <li class="list">
+			   <div class="top">
+			      <div class="title">无照经营商游</div>
+				  <div class="time">剩余06:23</div>
+			   </div>
+			   <div class="info">
+				  <div class="date">2017-7-12 6:30</div>
+			   </div>
+			 </li>
+			 
+			 <li class="list">
+			   <div class="top">
+			      <div class="title">无照经营商游</div>
+				  <div class="time">剩余06:23</div>
+			   </div>
+			   <div class="info">
+				  <div class="date">2017-7-12 6:30</div>
+			   </div>
+			 </li>
+           </ul>
+         
+	    </div>
+     </div>
+   </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/template.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/android.js"></script>
+<script>
+	var myScroll; 
+    function loaded() { 
+    myScroll = new iScroll('content');
+	 
+    }  
+    window.addEventListener('load', loaded, false); 	
+	$('body').click(function(e){
+		if(e.target.nodeName != "INPUT"){
+			$('input').blur();
+		};
+	})
+</script>
+<script src="js/illegalreminder.js"></script>
+</body>
+</html> 

@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-现场改动</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-xianchanggaidong.css" />
+	<link rel="stylesheet" href="css/ui-weicaiji.css">
+	<link rel="stylesheet" href="css/ui-eventype.css">
+</head> 
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header"> 
+	     <div class="back" onclick="openWindow('./index.html');">返回</div>
+         <div class="h1">现场改动</div>
+		 <div class="zimu" onclick="openWindow('./shangbaohistory.html?type=' + GetQueryString('type'));">上报历史</div>
+	  </div>
+    </div>
+    <div id="content">
+		<div class="content">
+
+			<form action="">
+				<!-- 第二类-->
+				<div class="weui-cells">
+					<div class="warn">
+						<span></span>
+						本案件已走权力阳光系统流程。
+					</div>
+					<a class="weui-cell weui-cell_access" id="event_type">
+						<div class="weui-cell__bd">
+							<p>事件类型</p>
+						</div>
+						<div class="weui-cell__ft event_type">
+
+						</div>
+					</a>
+				</div>
+				<div class="weui-cells">
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>事件标题</p>
+						</div>
+						<div class="weui-cell__ft">
+							<input name="EVEN_NO" class=" weui-input text-right" type="text" placeholder="请输入事件标题">
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>当事人姓名</p>
+						</div>
+						<div class="weui-cell__ft">
+							<input name="NAME" class=" weui-input text-right" type="text" placeholder="请输入当事人姓名">
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>联系方式</p>
+						</div>
+						<div class="weui-cell__ft">
+							<input name="PHONENO" class=" weui-input text-right" type="text" placeholder="请输入联系方式">
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<p>事件地址</p>
+						</div>
+						<div class="weui-cell__ft">
+							<input name="EVEN_ADDR" class=" weui-input text-right adress" type="text" placeholder="请输入事件地址">
+						</div>
+					</div>
+				</div>
+
+				<!--意见-->
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<textarea name="YIJIAN" class="weui-textarea" placeholder="请输入相关意见..." rows="3"></textarea>
+							<div class="weui-textarea-counter"><span>0</span>/200</div>
+						</div>
+					</div>
+				</div>
+				<!-- 第三类-->
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<textarea name="DESCRIPTION" class="weui-textarea" placeholder="请输入事件描述..." rows="3"></textarea>
+							<div class="weui-textarea-counter"><span>0</span>/200</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 第四类-->
+				<div class="page__bd">
+					<div class="weui-gallery" id="gallery">
+						<span class="weui-gallery__img" id="galleryImg"></span>
+						<div class="weui-gallery__opr">
+							<a href="javascript:" class="weui-gallery__del">
+								<i class="weui-icon-delete weui-icon_gallery-delete"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="weui-cells weui-cells_form">
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<div class="weui-uploader">
+									<div class="weui-uploader__hd">
+										<p class="weui-uploader__title">处理前照片</p>
+
+									</div>
+									<div class="weui-uploader__bd">
+										<ul class="weui-uploader__files" id="uploaderFiles">
+
+										</ul>
+										<div class="weui-uploader__input-box">
+											<input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="" onclick="openAblum(0)">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 第五类-->
+				<div class="page__bd">
+					<div class="weui-gallery" id="gallery2">
+						<span class="weui-gallery__img" id="galleryImg2"></span>
+						<div class="weui-gallery__opr">
+							<a href="javascript:" class="weui-gallery__del">
+								<i class="weui-icon-delete weui-icon_gallery-delete"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="weui-cells weui-cells_form">
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<div class="weui-uploader">
+									<div class="weui-uploader__hd">
+										<p class="weui-uploader__title">处理后照片</p>
+
+									</div>
+									<div class="weui-uploader__bd">
+										<ul class="weui-uploader__files" id="uploaderFiles2">
+
+										</ul>
+										<div class="weui-uploader__input-box">
+											<input id="uploaderInput2" class="weui-uploader__input" type="file" accept="image/*" multiple="" onclick="openAblum(0)">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 第六类-->
+				<div class="page__bd page__bd_spacing">
+					<a href="javascript:;" class="weui-btn weui-btn_primary gaidong-bg" id="upData">上报</a>
+				</div>
+			</form>
+
+			<!--弹出层-->
+			<div class="event">
+				<div class="mask"></div>
+				<div class="body">
+					<div class="top"></div>
+					<div class="weui-cells">
+						<div class="body-left fl">
+							<div class="weui-cell type">
+								<div class="weui-cell__bd">
+									<p>事件大类</p>
+								</div>
+								<div class="weui-cell__ft">
+								</div>
+							</div>
+							<ul class="event_large">
+								<!--<li class="active">-->
+								<!--<span></span>事件大类</li>-->
+								<!--<li><span></span>事件大类</li>-->
+								<!--<li><span></span>事件大类</li>-->
+								<!--<li><span></span>事件大类</li>-->
+							</ul>
+						</div>
+						<div class="body-right">
+							<div class="weui-cell type">
+								<div class="weui-cell__bd">
+									<p>事件小类</p>
+								</div>
+								<div class="weui-cell__ft">
+								</div>
+							</div>
+							<ul class="event_small">
+								<!--<li>-->
+								<!--<div class="weui-cells weui-cells_radio">-->
+								<!--<label class="weui-cell weui-check__label" for="x12">-->
+								<!--<div class="weui-cell__bd">-->
+								<!--<p>小类11</p>-->
+								<!--</div>-->
+								<!--<div class="weui-cell__ft">-->
+								<!--<input type="radio" class="weui-check" name="radio1" id="x12">-->
+								<!--<span class="weui-icon-checked"></span>-->
+								<!--</div>-->
+								<!--</label>-->
+								<!--</div>-->
+								<!--</li>-->
+								<!--<li>-->
+								<!--<div class="weui-cells weui-cells_radio">-->
+								<!--<label class="weui-cell weui-check__label" for="x13">-->
+								<!--<div class="weui-cell__bd">-->
+								<!--<p>小类12</p>-->
+								<!--</div>-->
+								<!--<div class="weui-cell__ft">-->
+								<!--<input type="radio" class="weui-check" name="radio1" id="x13">-->
+								<!--<span class="weui-icon-checked"></span>-->
+								<!--</div>-->
+								<!--</label>-->
+								<!--</div>-->
+								<!--</li>-->
+								<!--<li>-->
+								<!--<div class="weui-cells weui-cells_radio">-->
+								<!--<label class="weui-cell weui-check__label" for="x14">-->
+								<!--<div class="weui-cell__bd">-->
+								<!--<p>小类11</p>-->
+								<!--</div>-->
+								<!--<div class="weui-cell__ft">-->
+								<!--<input type="radio" class="weui-check" name="radio1" id="x14">-->
+								<!--<span class="weui-icon-checked"></span>-->
+								<!--</div>-->
+								<!--</label>-->
+								<!--</div>-->
+								<!--</li>-->
+								<!--<li>-->
+								<!--<div class="weui-cells weui-cells_radio">-->
+								<!--<label class="weui-cell weui-check__label" for="x15">-->
+								<!--<div class="weui-cell__bd">-->
+								<!--<p>小类11</p>-->
+								<!--</div>-->
+								<!--<div class="weui-cell__ft">-->
+								<!--<input type="radio" class="weui-check" name="radio1" id="x15">-->
+								<!--<span class="weui-icon-checked"></span>-->
+								<!--</div>-->
+								<!--</label>-->
+								<!--</div>-->
+								<!--</li>-->
+								<!--<li>-->
+								<!--<div class="weui-cells weui-cells_radio">-->
+								<!--<label class="weui-cell weui-check__label" for="x16">-->
+								<!--<div class="weui-cell__bd">-->
+								<!--<p>小类11</p>-->
+								<!--</div>-->
+								<!--<div class="weui-cell__ft">-->
+								<!--<input type="radio" class="weui-check" name="radio1" id="x16">-->
+								<!--<span class="weui-icon-checked"></span>-->
+								<!--</div>-->
+								<!--</label>-->
+								<!--</div>-->
+								<!--</li>-->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+     </div>
+   </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/template.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+	var myScroll; 
+    function loaded() { 
+    myScroll = new iScroll('content');
+	 
+    }  
+    window.addEventListener('load', loaded, false); 	
+	$('body').click(function(e){
+		if(e.target.nodeName != "INPUT"){
+			$('input').blur();
+		};
+	})
+</script>
+<script src="js/sitemodification.js"></script>
+
+<script type="text/html" id="eventType">
+	{{ each data as value i }}
+	<li data-id="{{ value.id }}">
+		<span></span>{{ value.name }}
+	</li>
+	{{ /each }}
+</script>
+
+<script type="text/html" id="eventList">
+	{{ each children as value i }}
+	<li>
+		<div class="weui-cells weui-cells_radio">
+			<label class="weui-cell weui-check__label" for="{{ value.id }}">
+				<div class="weui-cell__bd">
+					<p>{{ value.name }}</p>
+				</div>
+				<div class="weui-cell__ft">
+					<input value="{{ value.id }}" type="radio" class="weui-check" name="radio1" id="{{ value.id }}">
+					<span class="weui-icon-checked"></span>
+				</div>
+			</label>
+		</div>
+	</li>
+	{{ /each }}
+</script>
+</body>
+</html> 

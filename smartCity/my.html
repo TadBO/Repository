@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-我的</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-personinfo.css" />   
+</head> 
+<body ontouchstart>
+<div id="wrap">
+    <div id="header"> 
+    </div>
+    <div id="content" class="personcenter">
+        <div class="top">
+		   <div class="touxiang" onclick="openAblum(1)">
+		      <img id="person_pic" src="images/personinfo-1-46-46.png"/>
+		   </div>
+		   <div class="nick">
+		      昵称：千里马
+		   </div>
+		</div>
+		<div class="con">
+				<div class="weui-media-box weui-media-box_small-appmsg">
+                    <div class="weui-cells">
+                        <a class="weui-cell weui-cell_access" href="./accountsettings.html">
+                            <div class="weui-cell__hd">
+							
+							<img src="images/personinfo-1-16-16.png" alt="" style="width:20px;margin-right:5px;display:block">
+							</div>
+                            <div class="weui-cell__bd weui-cell_primary">
+                                <p>账号设置</p>
+                            </div>
+                            <span class="weui-cell__ft"></span>
+                        </a>
+                        <a class="weui-cell weui-cell_access" href="./workLedger.html">
+                            <div class="weui-cell__hd">
+							  <img src="images/personinfo-2-16-16.png" alt="" style="width:20px;margin-right:5px;display:block">
+							</div>
+                            <div class="weui-cell__bd weui-cell_primary">
+                                <p>工作台账</p>
+                            </div>
+                            <span class="weui-cell__ft"></span>
+                        </a>
+                    </div>
+                </div> 
+		</div>
+    </div>
+    <div id="footer">
+	      <div class="weui-tabbar"> 
+                <a href="javascript:;" class="weui-tabbar__item" onclick="openWindow('./index.html')">
+                    <img src="images/index-1-20-20.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">首页</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item" onclick="openWindow('./news.html')">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="images/index-2-20-20.png" alt="" class="weui-tabbar__icon">
+                        <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
+                    </span>
+                    <p class="weui-tabbar__label">消息</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item" onclick="openWindow('./my.html')">
+                    <img src="images/index-3-20-20.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">我</p>
+                </a>
+            </div>
+    </div>
+ </div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script> 
+</body>
+</html> 

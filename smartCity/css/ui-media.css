@@ -1,0 +1,18 @@
+/* CSS Document */
+@media all{	html{font-size:16px;}}
+@media all and (max-device-width: 319px){html{font-size:12px;}}
+@media all and (min-width: 350px) and (max-device-width: 450px){html{font-size:18px;}}
+@media all and (min-width: 451px) and (max-device-width: 580px){html{font-size:21px;}}
+@media all and (min-width: 581px) and (max-device-width: 680px){html{font-size:28px;}}
+@media all and (min-width: 681px) and (max-device-width: 750px){html{font-size:32px;}}
+@media all and (min-width: 751px) and (max-device-width: 820px){html{font-size:34px;}}
+@media all and (min-width: 821px) and (max-device-width: 890px){html{font-size:37px;}}
+@media all and (min-width: 891px) and (max-device-width: 950px){html{font-size:39px;}}
+@media all and (min-width: 961px) and (max-device-width: 990px){html{font-size:42px;}}
+@media all and (min-width: 991px) and (max-device-width: 1100px){html{font-size:44px;}}
+@media all and (min-width: 1101px) and (max-device-width: 1260px){html{font-size:50px;}}
+@media all and (min-width: 1261px) and (max-device-width: 1400px){html{font-size:53px;}}
+@media all and (min-width: 1401px) and (max-device-width: 1600px){html{font-size:58px;}}
+@media all and (min-width: 1601px) and (max-device-width: 1800px){html{font-size:63px;}}
+@media all and (min-width: 1801px) and (max-device-width: 2200px){html{font-size:70px;}}
+@media all and (min-width: 2201px){html{font-size:75px;}}

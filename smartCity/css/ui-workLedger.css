@@ -1,0 +1,12 @@
+/*工作台账部分*/
+
+.content .list .time {
+    background-color: #D8D8D8;
+    color: #fff;
+}
+.content .list img {
+    width: 30px;
+}
+.lists .list .details .detailsCon {
+    max-width: 234px;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>城管-事件类型</title>
+    <link rel="stylesheet" href="css/ui-media.css" />
+    <link rel="stylesheet" href="css/ui-component.css"/>
+    <link rel="stylesheet" href="css/ui-common.css"/>
+    <link rel="stylesheet" href="css/ui-xianchanggaidong.css" />
+    <link rel="stylesheet" href="css/ui-weicaiji.css">
+    <link rel="stylesheet" href="css/ui-eventype.css">
+</head>
+<body ontouchstart onload="loaded()">
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+        <div class="header">
+            <div class="back" onclick="openWindow('./'+ GetQueryString('type')+'.html')"></div>
+            <div class="h1">事件类型</div>
+            <div class="zimu" id="save">保存</div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="content">
+            <div class="weui-loadmore">
+                <i class="weui-loading"></i>
+                <span class="weui-loadmore__tips">正在加载</span>
+            </div>
+            <div class="weui-cells">
+                    <div class="body-left fl">
+                        <div class="weui-cell type">
+                            <div class="weui-cell__bd">
+                                <p>事件大类</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </div>
+                        <ul class="event_large">
+                            <li class="active">
+                                <span></span>事件大类</li>
+                            <li><span></span>事件大类</li>
+                            <li><span></span>事件大类</li>
+                            <li><span></span>事件大类</li>
+                        </ul>
+                    </div>
+                    <div class="body-right">
+                        <div class="weui-cell type">
+                            <div class="weui-cell__bd">
+                                <p>事件小类</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </div>
+                        <ul class="event_small">
+                            <li>
+                                <div class="weui-cells weui-cells_radio">
+                                    <label class="weui-cell weui-check__label" for="x12">
+                                        <div class="weui-cell__bd">
+                                            <p>小类11</p>
+                                        </div>
+                                        <div class="weui-cell__ft">
+                                            <input type="radio" class="weui-check" name="radio1" id="x12">
+                                            <span class="weui-icon-checked"></span>
+                                        </div>
+                                    </label>
+                            </div>
+                            </li>
+                            <li>
+                                <div class="weui-cells weui-cells_radio">
+                                    <label class="weui-cell weui-check__label" for="x13">
+                                        <div class="weui-cell__bd">
+                                            <p>小类11</p>
+                                        </div>
+                                        <div class="weui-cell__ft">
+                                            <input type="radio" class="weui-check" name="radio1" id="x13">
+                                            <span class="weui-icon-checked"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="weui-cells weui-cells_radio">
+                                    <label class="weui-cell weui-check__label" for="x14">
+                                        <div class="weui-cell__bd">
+                                            <p>小类11</p>
+                                        </div>
+                                        <div class="weui-cell__ft">
+                                            <input type="radio" class="weui-check" name="radio1" id="x14">
+                                            <span class="weui-icon-checked"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="weui-cells weui-cells_radio">
+                                    <label class="weui-cell weui-check__label" for="x15">
+                                        <div class="weui-cell__bd">
+                                            <p>小类11</p>
+                                        </div>
+                                        <div class="weui-cell__ft">
+                                            <input type="radio" class="weui-check" name="radio1" id="x15">
+                                            <span class="weui-icon-checked"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="weui-cells weui-cells_radio">
+                                    <label class="weui-cell weui-check__label" for="x16">
+                                        <div class="weui-cell__bd">
+                                            <p>小类11</p>
+                                        </div>
+                                        <div class="weui-cell__ft">
+                                            <input type="radio" class="weui-check" name="radio1" id="x16">
+                                            <span class="weui-icon-checked"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/init.js"></script>
+<script src="js/template.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+    //滚动事件
+    var myScroll;
+    function loaded() {
+        setTimeout(function () {
+            myScroll = new iScroll('content', {
+
+                onRefresh: function () {
+
+                },
+                onScrollMove: function () {
+                    console.log(this.y);
+                    console.log(this.maxScrollY);
+                },
+                onScrollEnd: function () {
+                    console.log(this.y);
+                }
+            });
+        }, 100);
+
+
+    }
+    window.addEventListener('load', loaded, false);
+    $('body').click(function(e){
+        if(e.target.nodeName != "INPUT"){
+            $('input').blur();
+        };
+    });
+</script>
+<script src="js/evenType.js"></script>
+<script type="text/html" id="eventType">
+    {{ each data as value i }}
+    <li data-id="{{ value.id }}">
+        <span></span>{{ value.name }}
+    </li>
+    {{ /each }}
+</script>
+
+<script type="text/html" id="eventList">
+    {{ each children as value i }}
+    <li>
+        <div class="weui-cells weui-cells_radio">
+            <label class="weui-cell weui-check__label" for="{{ value.id }}">
+                <div class="weui-cell__bd">
+                    <p>{{ value.name }}</p>
+                </div>
+                <div class="weui-cell__ft">
+                    <input value="{{ value.id }}" type="radio" class="weui-check" name="radio1" id="{{ value.id }}">
+                    <span class="weui-icon-checked"></span>
+                </div>
+            </label>
+        </div>
+    </li>
+    {{ /each }}
+</script>
+</body>
+</html>

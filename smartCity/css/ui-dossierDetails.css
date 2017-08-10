@@ -1,0 +1,49 @@
+/*案卷详情主体部分*/
+.content .dossierType {
+    height: 44px;
+    background-color: #fff;
+    margin-top: 12px;
+
+}
+.content .dossierType .title {
+
+    font-size: 16px;
+    color: #222;
+}
+.content .dossierType .info {
+    font-size: 14px;
+    color: #AEAEAE;
+    float: right;
+}
+.content .dossierType .info i {
+    font-size: 16px;
+    margin-left: 6px;
+}
+.content .dossierAdress .title {
+    color: #555;
+}
+.content .dossierDetails {
+    height: 100px;
+    background-color: #fff;
+    margin-top: 12px;
+    padding-left: 10px;
+}
+.content .dossierDetails .title {
+    font-size: 16px;
+    color: #555;
+    padding:10px 0 ;
+}
+.content .dossierDetails .info {
+    font-size: 14px;
+    color: #AEAEAE;
+}
+.content .dossierDetails img {
+    width: 56px;
+    height: 56px;
+}
+.content .dossierPhotos {
+    height: 110px;
+}
+.content .dossierPhotos .title {
+    color: #222;
+}

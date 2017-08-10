@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>城管-车牌识别</title>
+    <link rel="stylesheet" href="css/ui-media.css" />
+    <link rel="stylesheet" href="css/ui-component.css"/>
+    <link rel="stylesheet" href="css/ui-common.css"/>
+    <link rel="stylesheet" href="css/ui-xianchanggaidong.css" />
+    <link rel="stylesheet" href="css/ui-plateRecognition.css">
+</head>
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+        <div class="header">
+            <div class="back" onclick="openWindow('./illegalreminder.html');">返回</div>
+            <div class="h1">车牌识别</div>
+            <div class="zimu"></div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="content">
+            <div class="image">
+                <img src="./images/100-82.png" alt="占位图">
+            </div>
+            <div class="info">
+                <p>当前识别车牌号</p>
+                <p>浙ASQW23</p>
+            </div>
+            <div class="page__bd page__bd_spacing">
+                <a href="javascript:;" class="weui-btn weui-btn_primary gaidong-bg">提交114平台</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+    var myScroll;
+    function loaded() {
+        myScroll = new iScroll('content');
+
+    }
+    window.addEventListener('load', loaded, false);
+    $('body').click(function(e){
+        if(e.target.nodeName != "INPUT"){
+            $('input').blur();
+        };
+    })
+</script>
+</body>
+</html>

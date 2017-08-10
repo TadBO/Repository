@@ -1,0 +1,31 @@
+{
+  "RemoteHost": "10.10.71.139",
+  "RemoteHost": "10.12.102.127",
+  "RemoteHost": "10.10.71.82",
+  "RemotePort": "8080",
+  "Menu": {
+    "Tops": [
+      {"title": "微采集", "url": "./weicaiji.html", "icon": "../images/index-1-60-60.png","resid": "1001"},
+      {"title": "协同请求", "url": "./xietong.html", "icon": "../images/index-2-60-60.png","resid": "1002"},
+      {"title": "协同处置", "url": "./coprocessing.html", "icon": "../images/index-5-26-24.png", "resid": "1004"},
+      {"title": "签到签退", "url": "./sign.html", "icon": "../images/index-3-60-60.png","resid": "1003"}
+
+    ],
+    "Items": [
+      {"title": "OA交办", "url": "./OAassign.html", "icon": "../images/index-5-26-24.png","resid": "3001"},
+      {"title": "数字城管", "url": "./OAassign.html", "icon": "../images/index-5-26-24.png","resid": "3002"},
+      {"title": "指令消息", "url": "./ordermessage.html", "icon": "../images/index-5-26-24.png","resid": "3003"}
+    ],
+    "Messages": [
+      {"title": "现场改动", "url": "./sitemodification.html?type=0", "icon": "../images/index-1-26-24.png", "resid": "2001"},
+      {"title": "简易流程", "url": "./sitemodification.html?type=1", "icon": "../images/index-2-26-24.png", "resid": "2002"},
+      {"title": "违停上报", "url": "./illegalreminder.html", "icon": "../images/index-3-26-24.png", "resid": "2003"},
+      {"title": "沿街店家", "url": "./storesalongtheway.html", "icon": "../images/index-4-26-24.png", "resid": "2004"}
+    ],
+    "Search": [
+      {"title": "审批查阅", "url": "./approvalsearch.html", "icon": "../images/index-9-26-24.png", "resid": "4001"},
+      {"title": "知识库", "url": "./knowledgerepository.html", "icon": "../images/index-10-26-24.png", "resid": "4002"},
+      {"title": "事件库", "url": "./laweventlibrary.html", "icon": "../images/index-11-26-24.png", "resid": "4003"}
+    ]
+  }
+}

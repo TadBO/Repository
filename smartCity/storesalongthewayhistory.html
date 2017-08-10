@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>     
+<head>        
+<meta charset="UTF-8">        
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">         
+<title>城管-沿街店家-历史</title>
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-component.css"/> 
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-yanjiedianjia.css" />   
+</head> 
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header"> 
+	     <div class="back" onclick="openWindow('./storesalongtheway.html');">返回</div>
+         <div class="h1">上报历史</div>
+		 <div class="zimu"></div>
+	  </div>
+    </div>
+    <div id="content">
+		<div class="content">
+		   
+           <ul class="lishi">
+             <!--<li class="list">-->
+			   <!--<div class="top">-->
+			      <!--<div class="title">世纪联华</div>-->
+				  <!--<div class="details">超市</div>-->
+			   <!--</div>-->
+			   <!--<div class="info">-->
+			      <!--<div class="address">文三路128</div>-->
+				  <!--<div class="date">2017-7-12 6:30</div>-->
+			   <!--</div>-->
+			 <!--</li>-->
+			 <!---->
+			 <!---->
+			  <!--<li class="list">-->
+			   <!--<div class="top">-->
+			      <!--<div class="title">世纪联华</div>-->
+				  <!--<div class="details">超市</div>-->
+			   <!--</div>-->
+			   <!--<div class="info">-->
+			      <!--<div class="address">文三路128</div>-->
+				  <!--<div class="date">2017-7-12 6:30</div>-->
+			   <!--</div>-->
+			 <!--</li>-->
+			 <!---->
+			 <!---->
+			  <!--<li class="list">-->
+			   <!--<div class="top">-->
+			      <!--<div class="title">世纪联华</div>-->
+				  <!--<div class="details">超市</div>-->
+			   <!--</div>-->
+			   <!--<div class="info">-->
+			      <!--<div class="address">文三路128</div>-->
+				  <!--<div class="date">2017-7-12 6:30</div>-->
+			   <!--</div>-->
+			 <!--</li>-->
+			 <!---->
+			 <!---->
+			  <!--<li class="list">-->
+			   <!--<div class="top">-->
+			      <!--<div class="title">世纪联华</div>-->
+				  <!--<div class="details">超市</div>-->
+			   <!--</div>-->
+			   <!--<div class="info">-->
+			      <!--<div class="address">文三路128</div>-->
+				  <!--<div class="date">2017-7-12 6:30</div>-->
+			   <!--</div>-->
+			 <!--</li>-->
+			 
+           </ul>
+         
+	    </div>
+     </div>
+   </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/template.js"></script>
+<script src="js/init.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+	var myScroll; 
+    function loaded() { 
+    myScroll = new iScroll('content');
+	 
+    }  
+    window.addEventListener('load', loaded, false); 	
+	$('body').click(function(e){
+		if(e.target.nodeName != "INPUT"){
+			$('input').blur();
+		};
+	})
+</script>
+<script src="js/shopList.js"></script>
+<script type="text/html" id="historyList">
+	{{ each sellerlist as value }}
+	<li class="list">
+		<div class="top">
+			<div class="title">{{ value.sellername }}</div>
+			<div class="details">{{ value.jyfw }}</div>
+		</div>
+		<div class="info">
+			<div class="address">{{ value.address }}</div>
+			<div class="date">{{ value.syscreatedate | dateFormat }}</div>
+		</div>
+	</li>
+	{{ /each }}
+</script>
+</body>
+</html> 

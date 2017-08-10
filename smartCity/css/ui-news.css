@@ -1,0 +1,44 @@
+﻿/*!
+ * author:zhouyu,telephone:15157151057
+ * Copyright 2017 chengyun, Inc.
+ * Licensed under the MIT license
+ */
+ /*background-image:url(../images/个人中心-750-413.png);
+   background-position:center ; background-repeat:no-repeat; background-size:100% auto;*/
+ 
+ 
+ 
+ /*news*/
+.date{font-size: 12px; color: #AEAEAE;margin-top: -13px;}
+
+/*消息的对话框详情*/ 
+.lists{padding:0 10px;}
+.lists .list{overflow:hidden;}
+.lists .list:last-child{margin-bottom:2rem;}
+.lists .list .time{background-color: #D8D8D8;font-size: 12px;
+         width: 110px;text-align: center;border-radius: 3px;margin: 8px auto;}
+.lists .list .details{position:relative;}
+.lists .list .details .nick{float: left;}
+.lists .list .details .detailsCon{ 
+			float: left;
+            margin-left: 16px;
+			font-size: 0.75rem;
+			background-color: #fff;
+			border-radius: 11px;
+			padding: 10px;
+			max-width: 200px;
+}
+	
+.lists .list .details .detailsCon:before{
+		    content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			position: absolute;
+			left: -15px;
+			top: 9px;
+			border-left: 8px solid transparent;
+			border-bottom: 8px solid transparent;
+			border-top: 8px solid transparent;
+			border-right: 8px solid #FFF;
+}

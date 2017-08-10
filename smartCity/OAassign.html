@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="all" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta http-equiv="pragma" Content="no-cach" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="keywords" content="" />
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="true" />
+
+<title>OA交办</title>
+
+<link rel="stylesheet" href="css/ui-media.css" />        
+<link rel="stylesheet" href="css/ui-common.css"/> 
+<link rel="stylesheet" href="css/ui-oa.css" />   
+<link rel="stylesheet" href="css/dropload.css">
+
+</head>
+<body ontouchstart>
+<div id="wrap">
+    <div id="header" data-position="fixed" data-tap-toggle="false">
+      <div class="header"> 
+	     <div class="back" onclick="openWindow('./index.html');">返回</div>
+         <div class="h1">OA交办</div>
+		 <div class="zimu"></div>
+	  </div>
+    </div>
+    <div id="content">
+			 <header class="tabHead">
+				  <span class="active">待处理事件</span>
+				  <span>超时提醒事件</span>
+				  <span>领导督办事件</span>
+				  <b class="border"></b>
+			 </header>
+			 <div id="khfxWarp">
+				 <article class="khfxWarp">
+						 <section class="khfxPane lishi aa" > 
+						 </section>
+
+						 <section class="khfxPane lishi">		
+						 </section>
+		
+						 <section class="khfxPane lishi" style="display:block"> 
+						 </section>
+				 </article>
+ 		    </div>
+     </div>
+   </div>
+</div>
+ 
+<script src="js/zepto.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/dropload.js"></script>
+<!--
+<script src="js/iscroll.js"></script>
+<script>
+	var myScroll; 
+    function loaded() { 
+      myScroll = new iScroll('khfxWarp');
+	 
+    }  
+    window.addEventListener('load', loaded, false); 	
+	$('body').click(function(e){
+		if(e.target.nodeName != "INPUT"){
+			$('input').blur();
+		};
+	})
+
+</script> -->
+<script src="js/oa.js"></script>
+</body>
+</html>
